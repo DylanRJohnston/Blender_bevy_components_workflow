@@ -111,7 +111,7 @@ def auto_export(changes_per_scene, changed_export_parameters, addon_prefs):
             for scene_name in main_scene_names:
                 # we have more relaxed rules to determine if the main scenes have changed : any change is ok, (allows easier handling of changes, render settings etc)
                 do_export_main_scene =  changed_export_parameters or scene_name in changes_per_scene.keys() or not check_if_blueprint_on_disk(scene_name, export_levels_path, gltf_extension)
-                if do_export_main_scene:
+                if True:
                     print("     exporting scene:", scene_name)
                     export_main_scene(bpy.data.scenes[scene_name], folder_path, addon_prefs, library_collections)
 
